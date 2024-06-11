@@ -4,4 +4,8 @@
 -->
 
 <h1>Gold Price Tracker</h1>
-<p>The current price of gold is: <%= @gold_price %> USD</p>
+<% if @gold_price %>
+  <p>The current price of gold is: <%= @gold_price %> USD</p>
+<% else %>
+  <p><%= @error_message %></p>
+<% end %>
