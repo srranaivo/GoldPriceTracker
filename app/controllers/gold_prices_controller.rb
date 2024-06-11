@@ -2,12 +2,13 @@ class GoldPricesController < ApplicationController
   require 'httparty'
 
   def index
-    response = HTTParty.get("https://metals-api.com/api/latest?access_key=r5aez8535k2h9ch78as69a53boi5td4v4lj1vzglt26l99j04h3c56i9b1dk&base=USD&symbols=XAU")
+    response = HTTParty.get("https://openexchangerates.org/api/latest.json?app_id=3f8b856ad62245ea8370fd5d9760c351")
 
     # Afficher la réponse complète pour le débogage
     Rails.logger.info "API Response: #{response.parsed_response.inspect}"
 
     if response.success?
+      # L'API openexchangerates ne fournit pas directement le prix de l'or, mais on peut utiliser le taux de XAU par rapport à l'USD
       if response.parsed_response["rates"] && response.parsed_response["rates"]["XAU"]
         @gold_price = response.parsed_response["rates"]["XAU"]
       else
