@@ -2,18 +2,51 @@
 <h1>GoldPrices#index</h1>
 <p>Find me in app/views/gold_prices/index.html.erb</p>
 -->
-<h1>Gold Price Tracker</h1>
+<%# <h1>Gold Price Tracker</h1> %>
 
+<%# <% if @gold_price %>
+  <%# <p>The current price of gold is: <%= number_with_precision(@gold_price, precision: 2, delimiter: ',')  USD per ounce troy</p> %>
+<%# <% else %>
+  <%# <p><%= @error_message %>
+  <%# </p> %>
+<%# <% end %>
 
-
-<% if @gold_price %>
-  <p>The current price of gold is: <%= number_with_precision(@gold_price, precision: 2, delimiter: ',') %> USD per ounce troy</p>
-<% else %>
-  <p><%= @error_message %></p>
-<% end %>
 
 <%# <% if @api_response %>
   <%# <h2>API Response</h2> %>
   <%# <pre><%= JSON.pretty_generate(@api_response) %>
   <%# </pre>
 <% end %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gold Price Tracker</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header text-center">
+            <h1>Gold Price Tracker</h1>
+          </div>
+          <div class="card-body text-center">
+            <% if @gold_price %>
+              <p class="display-4">The current price of gold is:</p>
+              <p class="display-4 text-success"><%= number_with_precision(@gold_price, precision: 2, delimiter: ',') %> USD per ounce troy</p>
+            <% else %>
+              <p class="text-danger"><%= @error_message %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
