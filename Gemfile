@@ -6,6 +6,10 @@ ruby "3.1.2"
 # gem httparty pour faciliter les requêtes HTTP
 gem 'httparty'
 
+# gem bootstrap pour améliorer le frontend
+gem 'bootstrap', '~> 5.1.0'
+gem 'jquery-rails'
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
