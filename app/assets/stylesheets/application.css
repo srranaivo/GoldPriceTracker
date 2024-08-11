@@ -175,15 +175,31 @@ body {
   flex: 1;
 }
 
+/* .footer {
+  background-color: #008000; /* Vert rappelant l'argent*/
+  /* color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  position: relative; */
+/* } */
+
+/* .footer img {
+  margin-top: 20px; /* Ajoute un espace au-dessus de l'image */
+  /* width: 200px; Ajuste la largeur de l'image à 150 pixels */
+  /*height: auto; /* Maintient les proportions de l'image*/
+/* } */
 .footer {
   background-color: #008000; /* Vert rappelant l'argent*/
   color: #fff;
   padding: 20px 0;
-  text-align: center;
-  width: 100%;
-  position: relative;
+  display: flex;
+  justify-content: center; /* Centre horizontalement*/
+  align-items: center; /* Centre verticalement*/
+  height: 100px; /* Définir une hauteur fixe pour le footer*/
 }
 
-.footer img {
-  margin-top: 20px;
+.footer-img {
+  max-height: 80px; /* Limite la hauteur de l'image*/
+  max-width: 100%; /* Assure que l'image reste proportionnée*/
 }
