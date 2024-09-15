@@ -203,3 +203,43 @@ body {
   max-height: 80px; /* Limite la hauteur de l'image*/
   max-width: 100%; /* Assure que l'image reste proportionnée*/
 }
+
+
+.gold-arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 200px;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0; /* Par défaut, les flèches sont invisibles */
+  transition: opacity 1s ease;
+}
+
+.gold-up {
+  transform: rotate(45deg); /* Crée une flèche vers le haut */
+}
+
+.gold-down {
+  transform: rotate(-135deg); /* Crée une flèche vers le bas */
+}
+
+.gold-coin {
+  width: 50px; /* Ajuste la taille des pièces */
+  height: auto;
+}
+
+.gold-up .gold-coin:not(:last-child),
+.gold-down .gold-coin:not(:last-child) {
+  margin-bottom: -30px; /* Superposition pour donner l'effet d'une flèche */
+}
+
+.gold-up.active,
+.gold-down.active {
+  opacity: 1; /* Rend la flèche visible */
+}
