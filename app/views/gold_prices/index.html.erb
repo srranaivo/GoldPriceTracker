@@ -200,6 +200,15 @@
             <% else %>
               <p class="text-danger"><%= @error_message %></p>
             <% end %>
+
+            <% if @previous_gold_price %>
+  <p>Gold Price Yesterday at 15:00: <%= number_to_currency(@previous_gold_price, unit: "USD") %></p>
+<% else %>
+  <p><%= @error_message %></p>
+<% end %>
+
+
+
           </div>
         </div>
       </div>
