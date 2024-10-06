@@ -202,7 +202,10 @@
             <% end %>
 
             <% if @previous_gold_price %>
-  <p>Gold Price Yesterday at 15:00: <%= number_to_currency(@previous_gold_price, unit: "USD") %></p>
+  <p>Gold Price Yesterday at 15:00: <%= number_with_precision(@previous_gold_price, precision: 2, delimiter: ',') %> USD per ounce</p>
+
+
+
 <% else %>
   <p><%= @error_message %></p>
 <% end %>
