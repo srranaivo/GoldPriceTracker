@@ -56,7 +56,8 @@ class GoldPricesController < ApplicationController
       @error_message = "Failed to fetch historical gold price from Open Exchange Rates: #{openexchangerates_response.code} - #{openexchangerates_response.message}"
     end
 
-
+# # Définir l'orientation en fonction de la comparaison
+#   @arrow_orientation = @gold_price > @previous_gold_price ? 'up' : 'down'
 
   end
 end

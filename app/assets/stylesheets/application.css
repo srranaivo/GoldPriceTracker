@@ -175,20 +175,7 @@ body {
   flex: 1;
 }
 
-/* .footer {
-  background-color: #008000; /* Vert rappelant l'argent*/
-  /* color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  width: 100%;
-  position: relative; */
-/* } */
 
-/* .footer img {
-  margin-top: 20px; /* Ajoute un espace au-dessus de l'image */
-  /* width: 200px; Ajuste la largeur de l'image à 150 pixels */
-  /*height: auto; /* Maintient les proportions de l'image*/
-/* } */
 .footer {
   background-color: #008000; /* Vert rappelant l'argent*/
   color: #fff;
@@ -205,41 +192,41 @@ body {
 }
 
 
+
 .gold-arrow-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  height: 200px;
+  margin-top: 50px;
 }
+
+
 
 .arrow {
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0; /* Par défaut, les flèches sont invisibles */
-  transition: opacity 1s ease;
+  justify-content: center;
 }
 
-.gold-up {
-  transform: rotate(45deg); /* Crée une flèche vers le haut */
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Ajuste selon l'espace souhaité */
+  /* display: inline-block; Ajuste le conteneur autour de l'image */
+  overflow: hidden; /* Cache tout débordement inutile */
 }
 
-.gold-down {
-  transform: rotate(-135deg); /* Crée une flèche vers le bas */
+.gold-arrow {
+  transform: rotate(45deg); /* Ajuste l'angle selon le degré d'inclinaison souhaité*/
 }
 
-.gold-coin {
-  width: 50px; /* Ajuste la taille des pièces */
-  height: auto;
-}
 
-.gold-up .gold-coin:not(:last-child),
-.gold-down .gold-coin:not(:last-child) {
-  margin-bottom: -30px; /* Superposition pour donner l'effet d'une flèche */
-}
 
-.gold-up.active,
-.gold-down.active {
-  opacity: 1; /* Rend la flèche visible */
+
+
+
+.arrow-head {
+  margin-bottom: -20px; /* Superposition légère pour créer la tête*/
 }

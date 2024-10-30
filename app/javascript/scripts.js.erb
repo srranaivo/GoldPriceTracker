@@ -1,0 +1,20 @@
+const arrowContainer = document.getElementById('arrow');
+
+// Récupérer le chemin de l'image avec asset_path
+const coinPath = "<%= asset_path('Gold-Coin.svg')
+
+// Créer la tête de la flèche
+for (let i = 0; i < 3; i++) {
+  const coin = document.createElement('img');
+  coin.src = coinPath;  // Utilise le chemin généré par asset_path
+  coin.className = 'gold-coin arrow-head';
+  arrowContainer.appendChild(coin);
+}
+
+// Créer le corps de la flèche
+for (let i = 0; i < 5; i++) {
+  const coin = document.createElement('img');
+  coin.src = coinPath;  // Utilise le chemin généré par asset_path
+  coin.className = 'gold-coin';
+  arrowContainer.appendChild(coin);
+}

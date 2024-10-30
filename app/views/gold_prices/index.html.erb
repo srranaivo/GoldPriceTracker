@@ -1,164 +1,3 @@
-<!--
-<h1>GoldPrices#index</h1>
-<p>Find me in app/views/gold_prices/index.html.erb</p>
--->
-<%# <h1>Gold Price Tracker</h1> %>
-
-<%# <% if @gold_price %>
-  <%# <p>The current price of gold is: <%= number_with_precision(@gold_price, precision: 2, delimiter: ',')  USD per ounce troy</p> %>
-<%# <% else %>
-  <%# <p><%= @error_message %>
-  <%# </p> %>
-<%# <% end %>
-
-
-<%# <% if @api_response %>
-  <%# <h2>API Response</h2> %>
-  <%# <pre><%= JSON.pretty_generate(@api_response) %>
-  <%# </pre>
-<% end %>
-
-
-<%# <!DOCTYPE html> %>
-<%# <html> %>
-<%# <head> %>
-  <%# <title>Gold Price Tracker</title> %>
-  <%# <%= csrf_meta_tags %>
-  <%# <%= csp_meta_tag %>
-  <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%# <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-<%# </head> %>
-<%# <body>
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8"> %>
-        <%# <div class="card">
-          <div class="card-header text-center">
-            <h1>Gold Price Tracker</h1>
-          </div> %>
-          <%# <div class="card-body text-center">
-            <% if @gold_price %>
-              <%# <p class="display-4">The current price of gold is:</p> %>
-              <%# <p class="display-4 text-success"><%= number_with_precision(@gold_price, precision: 2, delimiter: ',') USD per ounce troy</p>
-            <% else %>
-              <%# <p class="text-danger"><%= @error_message </p>
-            <% end %>
-          <%# </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html> %>
-
-
-
-<%# <!DOCTYPE html>
-<html>
-<head>
-  <title>Gold Price Tracker</title>
-  <%= csrf_meta_tags %>
-  <%# <%= csp_meta_tag %>
-  <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%# <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%# <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> %>
-<%# </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light"> %>
-    <%# <a class="navbar-brand" href="#">Gold Price Tracker</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> %>
-    <%# <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </div> %>
-  <%# </nav>
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header center-text">
-            <h1>Gold Price Tracker</h1>
-          </div>
-          <div class="card-body center-text">
-            <% if @gold_price %>
-              <%# <p class="display-4">The current price of gold is:</p> %>
-              <%# <p class="gold-price"><%= number_with_precision(@gold_price, precision: 2, delimiter: ',') USD per ounce troy</p> %>
-            <%# <% else %>
-              <%# <p class="text-danger"><%= @error_message </p> %>
-            <%# <% end %>
-          <%# </div> %>
-        <%# </div>
-      </div> %>
-    <%# </div>
-  </div>
-</body>
-</html>  %>
-
-
-<%# <!DOCTYPE html>
-<html>
-<head>
-  <title>Gold Price Tracker</title>
-  <%= csrf_meta_tags %>
-  <%# <%= csp_meta_tag %>
-  <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%# <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%# <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head> %>
-<%# <body>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand center-text" href="#">Gold Price Tracker</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> %>
-    <%# <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-      </ul>
-    </div>
-  </nav> %>
-  <%# <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header center-text">
-            <h1>Gold Price Tracker</h1>
-          </div> %>
-          <%# <div class="card-body center-text">
-            <% if @gold_price %>
-              <%# <p class="display-4">The current price of gold is:</p>
-              <p class="gold-price"><%= number_with_precision(@gold_price, precision: 2, delimiter: ',')  USD per ounce troy</p>
-            <% else %>
-              <%# <p class="text-danger"><%= @error_message </p>
-            <% end %>
-          <%# </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer class="footer">
-    <img src="https://example.com/gold-bar.png" alt="Gold Bar">
-  </footer>
-</body>
-</html> %>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -170,6 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Conteneur vide où la flèche sera générée -->
+  <div id="arrow"></div>
+
+
+
+
+
+  <!-- Lien vers ton fichier JavaScript -->
+  <script src="scripts.js"></script>
+
+
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand center-text" href="#">Gold Price Tracker</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -210,31 +61,19 @@
   <p><%= @error_message %></p>
 <% end %>
 
-
-
           </div>
         </div>
       </div>
     </div>
   </div>
 
-<div class="gold-arrow-container">
-  <!-- Flèche vers le haut (cours haussier) -->
-  <div class="arrow gold-up">
-    <%= image_tag("Gold-Coin.svg", alt: "Gold Coin", class: "gold-coin") %>
-    <%= image_tag("Gold-Coin.svg", alt: "Gold Coin", class: "gold-coin") %>
-    <%= image_tag("Gold-Coin.svg", alt: "Gold Coin", class: "gold-coin") %>
-    <%= image_tag("Gold-Coin.svg", alt: "Gold Coin", class: "gold-coin") %>
-  </div>
-
-  <!-- Flèche vers le bas (cours baissier) -->
-  <div class="arrow gold-down">
-    <%= image_tag("Gold-Coin.svg", alt: "Gold Coin", class: "gold-coin") %>
-    <%= image_tag("Gold-Coin.svg", alt: "Gold Coin", class: "gold-coin") %>
-    <%= image_tag("Gold-Coin.svg", alt: "Gold Coin", class: "gold-coin") %>
-    <%= image_tag("Gold-Coin.svg", alt: "Gold Coin", class: "gold-coin") %>
-  </div>
+<div class="center-image">
+  <%= image_tag 'arrow_coin.png', alt: 'Gold Coin Arrow', class: 'gold-arrow'%>
 </div>
+
+
+
+
 
 
 
