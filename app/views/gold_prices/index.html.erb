@@ -67,10 +67,17 @@
     </div>
   </div>
 
-<div class="center-image">
-  <%= image_tag 'arrow_coin.png', alt: 'Gold Coin Arrow', class: 'gold-arrow'%>
-</div>
+<%# <div class="center-image">
+  <%= image_tag 'arrow_coin.png', alt: 'Gold Coin Arrow', class: 'gold-arrow'
+</div> %>
 
+<div class="center-image">
+  <% if @gold_price > @previous_gold_price %>
+    <%= image_tag 'arrow_up.png', alt: 'Gold Arrow Up', class: 'gold-arrow' %>
+  <% else %>
+    <%= image_tag 'arrow_down.png', alt: 'Gold Arrow Down', class: 'gold-arrow' %>
+  <% end %>
+</div>
 
 
 
